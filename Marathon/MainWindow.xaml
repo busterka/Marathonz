@@ -1,0 +1,21 @@
+﻿<Window x:Class="Marathon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Marathon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame Name="MainFrame"  Background="LightBlue"  Grid.Row="1"></Frame>
+        <Frame NavigationUIVisibility="Hidden" Background="LightGray"></Frame>
+        <Button Name="GoBackButton"   Click ="GlobalButton_Click"  HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="103">Назад</Button>
+        <Label   Background="LightGray" FontSize="30" Margin="239,0,169,0">MARATHON SKILLS 2016</Label>
+        <Label  Background="LightGray" FontSize="18"  Grid.Row="2">18 часов до 17 минут до старта</Label>
+    </Grid>
+</Window>

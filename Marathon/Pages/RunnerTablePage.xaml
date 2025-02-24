@@ -1,0 +1,44 @@
+﻿<Page x:Class="Marathon.Pages.RunnerTablePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Marathon.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RunnerTablePage">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <ComboBox DisplayMemberPath="CountryName" Name="CountriesCombobox" ></ComboBox>
+            <Button Name="CountryFilterButton" Click="CountryFilterButton_Click">Фильтр по стране</Button>
+            <Button Name="AllCountryButton" Click="AllCountryButton_Click">Показать все страны</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox Name ="EmailTextBox" TextChanged="EmailTextBox_TextChanged"></TextBox>
+            <TextBox Name ="NameTextBox" TextChanged="NameTextBox_TextChanged"></TextBox>
+        </StackPanel>
+        <DataGrid Name="RunnersDataGrid" AutoGenerateColumns="False" Grid.Row="1" Grid.ColumnSpan="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding User.FirstName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding User.LastName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="пол" Binding="{Binding Gender}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email бегуна" Binding="{Binding Email}"></DataGridTextColumn>
+                <DataGridTextColumn Header="страна" Binding="{Binding Country.CountryName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding DateOfBirth}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>
+

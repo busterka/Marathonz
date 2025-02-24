@@ -1,0 +1,40 @@
+﻿<Page x:Class="Marathon.Pages.AutorizPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Marathon.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AutorizPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="301*"/>
+            <ColumnDefinition Width="193*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="2" Grid.Row="0" FontSize="24" >Форма авторизации</Label>
+        <Label Grid.Column="1" Grid.Row="1" FontSize="18" HorizontalAlignment="Right" Width="56"  >Email:</Label>
+        <Label Grid.Column="1" Grid.Row="2" FontSize="18" HorizontalAlignment="Right" Width="84" >Password</Label>
+        <TextBox Name="EmailTexboxPag3" Grid.Column="2" Grid.Row="1" FontSize="18" VerticalAlignment="Top" Height="26">a.allison@gmail.com</TextBox>
+        <PasswordBox Name="PasswordPag3" Grid.Column="2" Grid.Row="2" FontSize="18" VerticalAlignment="Top" Height="26" Password="OPuDrw9O"></PasswordBox>
+        <Label Grid.Column="2" Grid.Row="3" FontSize="18" Name="LableEmail" VerticalAlignment="Bottom"></Label>
+
+        <StackPanel Orientation="Horizontal"  VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="3" Margin="0,0,10,10">
+            <Button Click="LoginButton_Click" Name="LoginButtonPage3" Width="130" Margin="0,31,0,0" Content="Login"/>
+            <Button Click="CancelButton_Click" Name="CancelButtonPage3" Width="130" Margin="0,31,0,0" Content="Cancel"/>
+        </StackPanel>
+
+
+    </Grid>
+</Page>
+
